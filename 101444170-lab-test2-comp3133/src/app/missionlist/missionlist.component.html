@@ -1,0 +1,14 @@
+<p>missionlist works!</p>
+<div class="mission-list">
+    <mat-card *ngFor="let launch of launches" class="mission-card">
+      <mat-card-header>
+        <mat-card-title>{{ launch.mission_name }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p><strong>Launch Year:</strong> {{ launch.launch_year }}</p>
+        <p><strong>Rocket Name:</strong> {{ launch.rocket.rocket_name }}</p>
+        <img *ngIf="launch.links.mission_patch" [src]="launch.links.mission_patch" alt="Mission Patch" width="100">
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
